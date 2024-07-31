@@ -6,6 +6,8 @@ import Hero from "./_components/Hero";
 import Video from "./_components/VideoSection";
 import Spacer from "./_components/Spacer";
 import Customer from "./_components/Customers";
+import FeatureSection from "./_components/FeatureSection";
+import Testimonials from "./_components/Testimonials";
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
       <div className="bg-gray-100">
           <Spacer height={50} />
           <Customer />
+          <FeatureSection />
+          <Testimonials />
       </div>
     </>
   );

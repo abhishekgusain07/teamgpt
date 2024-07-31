@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'custom': '0 0 10px 0 rgba(0, 0, 0, 0.11)',
+      },
+      fontFamily: {
+        'plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
+      },
       alignItems: {
         'normal': 'normal',
       },
@@ -28,11 +34,32 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'text-slide-2-smooth': {
+          '0%, 50%': {
+            transform: 'translateY(0%)',
+          },
+          '50.1%, 100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
+        numberSlide: {
+          '0%, 50%': { transform: 'translateY(0)' },
+          '50.01%, 100%': { transform: 'translateY(-100%)' },
+        },
+        textSlide: {
+          '0%, 50%': { transform: 'translateY(0)' },
+          '50.01%, 100%': { transform: 'translateY(-100%)' },
+        },
+                        
       },
       animation: {
         dash: 'dash 1.2s linear forwards',
         fadeIn: 'fadeIn 1.2s ease-out forwards',
-        draw: 'draw 1.5s ease forwards'
+        draw: 'draw 1.5s ease forwards',
+        fadeInUp: 'fadeInUp 1s ease-out',
+        'text-slide-2-smooth': 'text-slide-2-smooth 6s linear infinite',
+        'number-slide': 'numberSlide 6s linear infinite',
+        'text-slide': 'textSlide 6s linear infinite',
       },
     },
   },

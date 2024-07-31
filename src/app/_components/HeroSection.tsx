@@ -13,7 +13,7 @@ export default function HeroSection() {
             <strong>Team-GPT</strong> guarantees ChatGPT adoption for teams between 2 and 20,000 people. Organize
             knowledge, collaborate, and master AI in one shared workspace.
           </p>
-          <Link href="/signup" className="bg-yellow-400 text-black px-8 py-3 rounded-md text-lg font-semibold hover:bg-yellow-500 inline-flex items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90">
+          <Link href="/signup" className="bg-[#F1DA44] text-black px-8 py-3 rounded-xl text-lg inline-flex items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90">
             Start free
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
