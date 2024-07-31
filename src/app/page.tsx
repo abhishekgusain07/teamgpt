@@ -8,6 +8,9 @@ import Spacer from "./_components/Spacer";
 import Customer from "./_components/Customers";
 import FeatureSection from "./_components/FeatureSection";
 import Testimonials from "./_components/Testimonials";
+import Pricing from "./_components/Pricing";
+import HowItWorks from "./_components/HowItWorks";
+import Faqs from "./_components/Faqs";
 
 export default function Home() {
   return (
@@ -26,6 +29,13 @@ export default function Home() {
           <Customer />
           <FeatureSection />
           <Testimonials />
+      </div>
+      <div className="bg-[#052727]">
+        {/* <Pricing /> */}
+      </div>
+      <div className="bg-[#F8F8FF]">
+        <HowItWorks />
+        <Faqs />
       </div>
     </>
   );
