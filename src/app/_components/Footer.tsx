@@ -107,11 +107,11 @@ const FooterMain = () => {
         <div className="bg-[#052727]">
             <div className="flex flex-row flex-wrap justify-start items-start basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[15px] py-[10px]">
                 {
-                    footerColumns.map((section) => (
-                        <div className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow p-[10px] w-[18%]">
+                    footerColumns.map((section, idx) => (
+                        <div key={idx} className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow p-[10px] w-[18%]">
                             {
                                 section.items.map((item,idx) => (
-                                    <div>
+                                    <div key={idx}>
                                         <span 
                                             className="font-plex-sans text-[1rem] font-[500]"
                                             style={{ color: item.color || '#ffffff' }}

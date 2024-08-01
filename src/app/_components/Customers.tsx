@@ -11,10 +11,10 @@ const Customer = () => {
             <Spacer height={25}/>
             <div className="flex flex-row gap-[4%] flex-nowrap basis-auto justify-evenly flex-shrink p-[10px] mx-auto animate-fadeInUp">
                 {companies.map((_,idx) => (
-                    <div className="flex flex-row items-center max-w-[100%] mb-[20px] text-center">
-                    <div className="h-full">
-                    <img decoding="async" width="300" height="74" src={companies[idx]} className="h-auto w-full inline-block align-middle" alt=""/>
-                    </div>
+                    <div key={idx} className="flex flex-row items-center max-w-[100%] mb-[20px] text-center">
+                        <div className="h-full">
+                            <img decoding="async" width="300" height="74" src={companies[idx]} className="h-auto w-full inline-block align-middle" alt=""/>
+                        </div>
                 </div>
                 ))}
             </div>

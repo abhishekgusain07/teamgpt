@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import HeroSection from "./_components/HeroSection";
 import Header from "./_components/Header";
-import Hero from "./_components/Hero";
 import Video from "./_components/VideoSection";
 import Spacer from "./_components/Spacer";
 import Customer from "./_components/Customers";
