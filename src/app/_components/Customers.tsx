@@ -7,18 +7,18 @@ const Customer = () => {
     return (
         <div className="bg-gray-100 p-8">
             <div className="flex flex-col py-2.5 justify-center basis-auto flex-shrink flex-grow self-auto gap-[20px] items-normal mx-auto h-[100%] w-[100%] max-w-[1140px] text-center">
-            <div className="text-center text-[2.5rem] font-[700] leading-[2.6rem]">Companies that trust us</div>
-            <Spacer height={25}/>
-            <div className="flex flex-row gap-[4%] flex-nowrap basis-auto justify-evenly flex-shrink p-[10px] mx-auto animate-fadeInUp">
-                {companies.map((_,idx) => (
-                    <div key={idx} className="flex flex-row items-center max-w-[100%] mb-[20px] text-center">
-                        <div className="h-full">
-                            <img decoding="async" width="300" height="74" src={companies[idx]} className="h-auto w-full inline-block align-middle" alt=""/>
-                        </div>
+                <div className="text-center text-[2.5rem] font-[700] leading-[2.6rem]">Companies that trust us</div>
+                <Spacer height={25}/>
+                <div className="flex flex-wrap  flex-row gap-[4%] md:flex-nowrap basis-auto justify-evenly flex-shrink p-[10px] mx-auto animate-fadeInUp">
+                    {companies.map((_,idx) => (
+                        <div key={idx} className="flex flex-row items-center max-w-[100%] mb-[20px] text-center">
+                            <div className="h-full">
+                                <img decoding="async" width="300" height="74" src={companies[idx]} className="h-auto w-full inline-block align-middle" alt=""/>
+                            </div>
+                    </div>
+                    ))}
                 </div>
-                ))}
-            </div>
-            <Spacer height={30} />
+                <Spacer height={30} />
             </div>
         </div>
     )
