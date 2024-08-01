@@ -131,7 +131,7 @@ const Testimonials = () => {
 const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
-      <div className="flex-col  md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
+      <div className="flex flex-col  md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
           <div className="p-2.5 bg-gray-300 rounded-md h-full justify-start mr-auto">
             <div className="font-plex-sans text-[1rem] font-[500] text-black leading-[1rem]">
@@ -236,104 +236,104 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
 const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
-      <div className="flex-col md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
-      <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
-          <div className="flex max-w-full justify-center items-center text-center w-full animate-fadeInUp relative">
-            <div className="h-full">
-              <img
-                decoding="async"
-                width="2556"
-                height="1434"
-                src={testimonial.mainImage.src}
-                className="inline-block align-middle h-auto max-w-full"
-                alt={testimonial.mainImage.alt}
-              />
-            </div>
-          </div>
-          <Spacer height={17} />
-          {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
-            <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">
-              <div className="w-full flex flex-row basis-auto gap-[23px]">
-                <div className="max-w-full text-center relative h-fit w-[20%] p-[10px]">
-                  <img
-                    decoding="async"
-                    width="800"
-                    height="800"
-                    src={singleTestimonial.image}
-                    className="rounded-[10px] inline-block align-middle h-auto w-full"
-                    alt=""
-                  />
-                </div>
-                <div className="w-[76.4%] flex flex-col max-w-[1140px] gap-[20px] p-[5px]">
-                  <div className="w-full relative h-full">
-                    <div className="text-[#052727] font-plex-sans text-[1rem] font-[400]">
-                      <b>{singleTestimonial.text}</b>
-                    </div>
-                  </div>
-                  <div className="w-full relative h-full">
-                    <div className="text-[#052727] font-plex-sans text-[1rem] font-[300] tracking-tight">
-                      {singleTestimonial.author}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
-          <div className="p-2.5 bg-gray-300 rounded-md h-full justify-start mr-auto">
-            <div className="font-plex-sans text-[1rem] font-[500] text-black leading-[1rem]">
-              {testimonial.title}
-            </div>
-          </div>
-          <div className="w-full mb-0 mt-2 relative">
-            <div className="max-w-full text-left">
+            <div className="flex max-w-full justify-center items-center text-center w-full animate-fadeInUp relative">
               <div className="h-full">
-                <h2 className="text-[#052727] font-plex-sans text-[2.5rem] font-[700] leading-[2.6rem]">
-                  {testimonial.heading}
-                </h2>
+                <img
+                  decoding="async"
+                  width="2556"
+                  height="1434"
+                  src={testimonial.mainImage.src}
+                  className="inline-block align-middle h-auto max-w-full"
+                  alt={testimonial.mainImage.alt}
+                />
               </div>
             </div>
+            <Spacer height={17} />
+            {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
+              <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">
+                <div className="w-full flex flex-row basis-auto gap-[23px]">
+                  <div className="max-w-full text-center relative h-fit w-[20%] p-[10px]">
+                    <img
+                      decoding="async"
+                      width="800"
+                      height="800"
+                      src={singleTestimonial.image}
+                      className="rounded-[10px] inline-block align-middle h-auto w-full"
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-[76.4%] flex flex-col max-w-[1140px] gap-[20px] p-[5px]">
+                    <div className="w-full relative h-full">
+                      <div className="text-[#052727] font-plex-sans text-[1rem] font-[400]">
+                        <b>{singleTestimonial.text}</b>
+                      </div>
+                    </div>
+                    <div className="w-full relative h-full">
+                      <div className="text-[#052727] font-plex-sans text-[1rem] font-[300] tracking-tight">
+                        {singleTestimonial.author}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727]">
-            <div className="h-full box-border">
-              {testimonial.description.map((para:any, idxx:any) => (
-                <p key={idxx} className="mt-0 text-[#052727] text-[1rem] font-plex-sans font-[500] mb-[0.9rem] box-border">
-                  {para}
-                </p>
-              ))}
+          <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
+            <div className="p-2.5 bg-gray-300 rounded-md h-full justify-start mr-auto">
+              <div className="font-plex-sans text-[1rem] font-[500] text-black leading-[1rem]">
+                {testimonial.title}
+              </div>
             </div>
-          </div>
-          <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727] relative mr-auto">
-            <div className="h-full box-border">
-              <ul className="list-none">
-                {testimonial.features.map((feature:any, idx:any) => (
-                  <li key={idx} className="flex flex-row justify-start items-center text-left mb-[2px]">
-                    <span className="font-plex-sans items-start text-left h-[20px] w-[20px]">
-                      <img src="/tick.png" alt="tick" />
-                    </span>
-                    <span className="font-plex-sans text-[1rem] font-[500] pl-[5px]">
-                      {feature.text}
-                    </span>
-                  </li>
+            <div className="w-full mb-0 mt-2 relative">
+              <div className="max-w-full text-left">
+                <div className="h-full">
+                  <h2 className="text-[#052727] font-plex-sans text-[2.5rem] font-[700] leading-[2.6rem]">
+                    {testimonial.heading}
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727]">
+              <div className="h-full box-border">
+                {testimonial.description.map((para:any, idxx:any) => (
+                  <p key={idxx} className="mt-0 text-[#052727] text-[1rem] font-plex-sans font-[500] mb-[0.9rem] box-border">
+                    {para}
+                  </p>
                 ))}
-              </ul>
+              </div>
             </div>
+            <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727] relative mr-auto">
+              <div className="h-full box-border">
+                <ul className="list-none">
+                  {testimonial.features.map((feature:any, idx:any) => (
+                    <li key={idx} className="flex flex-row justify-start items-center text-left mb-[2px]">
+                      <span className="font-plex-sans items-start text-left h-[20px] w-[20px]">
+                        <img src="/tick.png" alt="tick" />
+                      </span>
+                      <span className="font-plex-sans text-[1rem] font-[500] pl-[5px]">
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <Spacer height={33} />
+            <div className="max-w-full relative mr-auto font-plex-sans flex flex-col flex-wrap justify-start items-start content-start gap-0 basis-auto grow-0 shrink-0 order-0 self-auto">
+              <Link
+                href={testimonial.buttonLink}
+                className="bg-[#F1DA44] text-black px-8 py-3 rounded-xl text-[1.25rem] font-[500] inline-flex items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90"
+              >
+                {testimonial.buttonText}
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <Spacer height={25} />
           </div>
-          <Spacer height={33} />
-          <div className="max-w-full relative mr-auto font-plex-sans flex flex-col flex-wrap justify-start items-start content-start gap-0 basis-auto grow-0 shrink-0 order-0 self-auto">
-            <Link
-              href={testimonial.buttonLink}
-              className="bg-[#F1DA44] text-black px-8 py-3 rounded-xl text-[1.25rem] font-[500] inline-flex items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90"
-            >
-              {testimonial.buttonText}
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-          <Spacer height={25} />
-        </div>
       </div>
     </div>
   );

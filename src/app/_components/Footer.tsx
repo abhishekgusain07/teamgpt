@@ -76,15 +76,15 @@ const Footer = () => {
 const FooterHeading = () => {
     return (
         <div className="bg-[#052727] flex flex-col rounded-t-[24px] -mt-6 mb-0 ml-0 mr-0">
-            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[20px] py-[10px]">
+            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[20px] py-[10px]">
                 <SpacerCustomColor backgroundColor={'#052727'} height={14}/>
-                <div className="flex flex-row w-full h-full flex-grow self-stretch sm:flex-wrap border-[3px] border-solid border-[#AFAFAF]  rounded-[20px] p-8 custom-bg-transition">
-                    <div className="w-[76%] flex flex-row justify-start items-center text-center p-2.5">
-                        <div className="max-w-full text-left relative">
-                        <h2 className="font-plex-sans text-[#ffffff] text-[2.5rem] font-[700] leading-[2.6rem]">Can you afford to skip on AI adoption?</h2>
+                <div className="flex flex-row w-[90vw] md:w-full h-full flex-grow self-stretch sm:flex-wrap border-[3px] border-solid border-[#AFAFAF]  rounded-[20px] p-8 custom-bg-transition">
+                    <div className="w-[76%] flex flex-row justify-center md:justify-start items-center text-center p-2.5">
+                        <div className="max-w-full text-center  md:text-left relative">
+                        <h2 className="font-plex-sans text-[#ffffff] text-[1.7rem] md:text-[2.5rem] font-[700] leading-[2.6rem]">Can you afford to skip on AI adoption?</h2>
                         </div>
                     </div>
-                    <div className="flex items-center justify-end text-center">
+                    <div className="flex items-center justify-center md:justify-end text-center">
                         <Link
                             href="/"
                             className="bg-[#F1DA44] text-black px-[36px] py-[15px] rounded-xl text-[1.5rem] leading-[1.6rem] font-[500] inline-flex font-plex-sans items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90"
@@ -105,15 +105,15 @@ const FooterMain = () => {
     return (
         <>
         <div className="bg-[#052727]">
-            <div className="flex flex-row flex-wrap justify-start items-start basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[15px] py-[10px]">
+            <div className="flex flex-col md:flex-row flex-wrap justify-start items-start basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[15px] py-[10px] px-[10px] md:[px-0]">
                 {
                     footerColumns.map((section, idx) => (
-                        <div key={idx} className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow p-[10px] w-[18%]">
+                        <div key={idx} className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow px-[30px] md:px-[10px] py-[10px] w-full md:w-[18%]">
                             {
                                 section.items.map((item,idx) => (
                                     <div key={idx}>
                                         <span 
-                                            className="font-plex-sans text-[1rem] font-[500]"
+                                            className="font-plex-sans text-[1.2rem] md:text-[1rem] font-[500]"
                                             style={{ color: item.color || '#ffffff' }}
                                             >
                                             <a className="no-underline" href={item.href} target="_blank">{item.text}</a>

@@ -60,7 +60,7 @@ const Cards = () => {
             {/* comp */}
             <div className="flex flex-col md:flex-row justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]">
             {steps.map((step) => (
-                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[60%] md:w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
+                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[97%] md:w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
                     <div className="flex justify-center items-center mx-auto  text-[#1CAB83] h-[25px] w-[20px] mb-4">
                         <FontAwesomeIcon icon={step.icon} className="w-[50px] h-[40px]"/>
                     </div>

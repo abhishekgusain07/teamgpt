@@ -22,7 +22,7 @@ const PricingHeading = () => {
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto mx-auto my-0 h-full w-full gap-[20px]">
                 <SpacerMain height={40} />
                 <div
-                className="w-full flex flex-row justify-center">
+                className="w-full flex flex-row justify-center items-center pl-5 md:pl-0">
                     <div className="h-full ">
                         <h2 className="text-[#F8F8FF] font-plex-sans text-[2.5rem] font-[700] leading-[2.6rem]">
                         A small price to pay.. to truly{" "}
@@ -85,7 +85,7 @@ const PricingTier = ({ tier }) => {
   };
 
   return (
-    <div className="flex flex-col border justify-between bg-custom-gradient hover:shadow-top-right border-[#1cffc3] rounded-[24px] shadow-xl p-6">
+    <div className="flex flex-col w-[70vw] sm:w-full mx-auto border justify-between bg-custom-gradient hover:shadow-top-right border-[#1cffc3] rounded-[24px] shadow-xl p-6">
       <div>
         <h2 className="text-lg leading-6 font-medium text-[#21EFB8]">{tier.name}</h2>
         <p className="font-plex-sans font-[700] text-[2rem] text-white">{tier.title}</p>

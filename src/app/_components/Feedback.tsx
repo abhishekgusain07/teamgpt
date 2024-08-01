@@ -14,12 +14,12 @@ const Feedback = () => {
 const FeedbackHeading = () => {
     return (
         <div className="bg-[#052727] flex flex-col rounded-t-[24px] -mt-6 mb-0 ml-0 mr-0">
-            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[20px] py-[10px]">
+            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto sm:mx-[150px] gap-[20px] py-[10px]">
                 <SpacerCustomColor backgroundColor={'#052727'} height={14}/>
-                <div className="flex flex-row w-full h-full flex-grow self-stretch sm:flex-wrap justify-center items-center rounded-[20px] p-8 custom-bg-transition">
-                    <div className="w-[76%] flex flex-row justify-center items-center text-center p-2.5">
+                <div className="flex flex-row w-full h-full flex-grow self-stretch sm:flex-wrap justify-center items-center rounded-[20px] p-3 md:p-8 custom-bg-transition">
+                    <div className="w-[76%] flex flex-row justify-center items-center text-center p-1 md:p-2.5">
                         <div className="max-w-full text-center relative">
-                        <h2 className="font-plex-sans text-[#ffffff] text-[2.5rem] font-[700] leading-[2.6rem]">Why our users loves us?</h2>
+                        <h2 className="font-plex-sans text-[#ffffff] text-[1.7rem] sm:text-[2.5rem] font-[700] leading-[2.6rem]">Why our users loves us?</h2>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const FeedbackContent = () => {
         <div className="bg-[#052727] flex flex-col p-[10px] w-full h-full">
             <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-[20px] p-[10px] w-full">
                 {feedbackDataFirst.map((item, index) => (
-                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-center p-[20px] w-[49%] animate-fadeInUp`}>
+                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-center p-[25px] md:p-[20px] w-[95%] md:w-[49%] animate-fadeInUp`}>
                         <div className="h-[62px] w-[52px] rounded-full flex flex-col justify-start items-center mr-auto">
                             <img className="rounded-full items-start" width="1024" height="1024" decoding="async" src={item.image} />
                         </div>
@@ -83,9 +83,9 @@ const FeedbackContent = () => {
                         </div>
                     </div>
                 ))}
-                <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-[20px] p-[10px] w-full">
+                <div className="flex flex-col md:flex-row flex-wrap justify-center items-normal gap-[20px] p-[10px] w-full">
                 {feedbackDataSecond.map((item, index) => (
-                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-center p-[20px] w-[32%]`}>
+                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-start p-[25px] md:p-[20px] w-[95%] md:w-[32%]`}>
                         <div className="h-[62px] w-[52px] rounded-full flex flex-col justify-start items-center mr-auto">
                             <img className="rounded-full items-start" width="1024" height="1024" decoding="async" src={item.image} />
                         </div>
