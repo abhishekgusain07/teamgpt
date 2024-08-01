@@ -55,12 +55,12 @@ const Cards = () => {
         <div
             className="bg-[#F8F8FF] flex flex-col ml-auto mx-auto p-[10px]"
         >
-            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[15px] ">
+            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[15px] ">
 
             {/* comp */}
-            <div className="flex justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]">
+            <div className="flex flex-col md:flex-row justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]">
             {steps.map((step) => (
-                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
+                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[60%] md:w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
                     <div className="flex justify-center items-center mx-auto  text-[#1CAB83] h-[25px] w-[20px] mb-4">
                         <FontAwesomeIcon icon={step.icon} className="w-[50px] h-[40px]"/>
                     </div>
