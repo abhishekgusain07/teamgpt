@@ -150,7 +150,7 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
           <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727]">
             <div className="h-full box-border">
               {testimonial.description.map((para:any, idxx:any) => (
-                <p key={idxx} className="mt-0 mb-[0.9rem] box-border">
+                <p key={idxx} className="mt-0 mb-[0.9rem] text-[#052727] text-[1rem] font-plex-sans font-[500] box-border">
                   {para}
                 </p>
               ))}
@@ -298,7 +298,7 @@ const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) =
           <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727]">
             <div className="h-full box-border">
               {testimonial.description.map((para:any, idxx:any) => (
-                <p key={idxx} className="mt-0 mb-[0.9rem] box-border">
+                <p key={idxx} className="mt-0 text-[#052727] text-[1rem] font-plex-sans font-[500] mb-[0.9rem] box-border">
                   {para}
                 </p>
               ))}
