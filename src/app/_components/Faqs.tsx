@@ -33,7 +33,7 @@ const Faqs = () => {
         <div className="bg-[#F8F8FF] flex flex-col">
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto gap-[15px] pt-[4rem] pb-[6rem] pl-[1rem] pr-[1rem]">
                 <div className="max-w-full relative h-full">
-                    <div className="flex flex-col bg-[#f8f8ff] pb-[2rem] px-[1rem] pt-[1rem] basis-auto flex-shrink flex-grow-0 text-center">
+                    <div className="flex flex-col bg-[#f8f8ff] pb-[2rem] px-[1rem] pt-[1rem] basis-auto flex-shrink flex-grow-0 text-center justify-center md:justify-normal">
                         <SpacerMain height={30}/>
                         <div className="flex flex-col gap-[30px] py-[15px]">
                             <h2 className="text-[#052727] font-plex-sans text-[2.5rem] font-[700] leading-[2.6rem] text-center">

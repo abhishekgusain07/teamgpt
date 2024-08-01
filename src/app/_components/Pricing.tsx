@@ -94,7 +94,7 @@ const PricingTier = ({ tier }) => {
           <span className="text-[3.5rem] font-[800] text-white font-plex-sans">
             {tier.name !== 'FLAGSHIP' ? '$' : ''}{tier.hasSlider ? calculatePrice(userCount) : tier.price}
           </span>
-          {tier.period && <span className="text-white font-plex-sans text-[1rem] text-[500]">{tier.period}</span>}
+          {tier.period && <span className="text-white font-plex-sans block md:inline text-[1rem] text-[500]">{tier.period}</span>}
         </div>
         <p className="text-[1rem] font-plex-sans font-[500] text-white">{tier.description}</p>
         

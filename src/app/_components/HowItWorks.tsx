@@ -18,7 +18,7 @@ const SectionHeading = () => {
         <div
             className="bg-[#F8F8FF] flex flex-col ml-auto mx-auto p-[10px]"
             >
-            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[20px] ">
+            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[20px] ">
             <SpacerCustomColor backgroundColor={'#F8F8FF'} height={20} />
             <div
                 className="max-w-full text-center"
