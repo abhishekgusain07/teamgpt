@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'background': 'background-color',
+      },
       boxShadow: {
         'custom': '0 0 10px 0 rgba(0, 0, 0, 0.11)',
       },
@@ -58,6 +61,7 @@ const config: Config = {
         fadeIn: 'fadeIn 1.2s ease-out forwards',
         draw: 'draw 1.5s ease forwards',
         fadeInUp: 'fadeInUp 1s ease-out',
+        fadeInDown: 'fadeInDown 1s ease-out',
         'text-slide-2-smooth': 'text-slide-2-smooth 6s linear infinite',
         'number-slide': 'numberSlide 6s linear infinite',
         'text-slide': 'textSlide 6s linear infinite',

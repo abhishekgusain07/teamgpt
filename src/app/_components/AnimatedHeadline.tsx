@@ -9,7 +9,7 @@ const AnimatedHeadline = () => {
   }, []);
 
   return (
-    <h1 className="text-center font-['IBM_Plex_Sans'] font-extrabold text-[3.5rem] leading-[75px] sm:text-[2.5rem] sm:leading-[1.3em] md:text-[3rem] lg:text-[3.5rem] mt-2 mb-4 px-">
+    <h1 className="text-center font-plex-sans font-extrabold text-[3.5rem] leading-[75px] sm:text-[2.5rem] sm:leading-[1.3em] md:text-[3rem] lg:text-[3.5rem] mt-2 mb-4 px-">
       <span className="inline-block">Intuitive GPT chat for your</span>{' '}
       <span className="inline-block relative">
         <span className={`inline-block ${isAnimating ? 'animate-fadeIn' : 'opacity-0'}`}>
