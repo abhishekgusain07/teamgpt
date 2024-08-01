@@ -116,7 +116,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0d2327] text-white">
+    <header className="hidden md:block sticky top-0 z-50 bg-[#0d2327] text-white">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="https://team-gpt.com" className="no-underline" target="_blank">
           <img

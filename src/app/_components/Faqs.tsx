@@ -30,7 +30,7 @@ const Faqs = () => {
         }
       ];
     return (
-        <div className="bg-[#F8F8FF] flex flex-col">
+        <div className="bg-[#F8F8FF] flex flex-col max-w-full">
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto gap-[15px] pt-[4rem] pb-[6rem] pl-[1rem] pr-[1rem]">
                 <div className="max-w-full relative h-full">
                     <div className="flex flex-col bg-[#f8f8ff] pb-[2rem] px-[1rem] pt-[1rem] basis-auto flex-shrink flex-grow-0 text-center justify-center md:justify-normal">
@@ -41,8 +41,8 @@ const Faqs = () => {
                             </h2>
                             <p className="mb-[1rem] mt-0 font-plex-sans tracking-wide">Can&apos;t find what you&apos;re looking for here? Feel free to reach out: <a className="no-underline text-[#1cab83] font-plex-sans font-[500] text-[1rem]" href="mailto:humans@team-gpt.com" target="_blank" rel="noopener">humans@team-gpt.com</a></p>
                         </div>
-                        <SpacerMain height={35}/>
-                        <div className="w-[90vw] max-w-[1200px]">
+                        <SpacerMain height={30}/>
+                        <div className="max-w-full">
                             {faqItems.map((item, index) => (
                                 <FAQItem key={index} question={item.question} answer={item.answer} />
                             ))}

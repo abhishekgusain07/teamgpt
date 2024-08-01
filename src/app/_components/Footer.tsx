@@ -123,18 +123,17 @@ const FooterMain = () => {
         </div>
     )
 }
-
 const FooterEnd = () => {
     return (
         <div className="bg-[#052727] flex flex-col">
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-4 md:mx-[150px] gap-[20px] py-[30px]">
-                <div className="flex flex-col md:flex-row justify-between w-full border-b border-[3px] py-[20px]">
+                <div className="flex flex-col md:flex-row justify-end w-full border-b-[2px] py-[20px]">
                     <div className="max-w-full relative text-center h-full mb-4 md:mb-0">
                         <img width="122" height="29" src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" className="inline-block align-middle h-auto max-w-full" alt="" data-lazy-src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" data-ll-status="loaded"/>
                     </div>
                     <div className="max-w-full relative text-center h-full">
                         <a href="https://camplight.net/" target="_blank" rel="nofollow" className="no-underline">
-                            <img width="3258" height="811" src="https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1.png" className="h-[26px] inline-block align-middle w-full" alt="" />
+                            <img width="3258" height="811" src="https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1.png" className="h-[26px] inline-block align-middle w-[130px] md:w-full" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -142,11 +141,11 @@ const FooterEnd = () => {
                     <div className="flex flex-row justify-center md:justify-start w-full md:w-[50%] items-center basis-auto flex-shrink flex-grow-0 mb-4 md:mb-0">
                         <div className="justify-start max-w-full relative text-left">
                             <a href="https://team-gpt.com" className="no-underline" target="_blank">
-                                <img src="https://team-gpt.com/wp-content/uploads/2023/09/Rectangle-White-Transparent-Border.svg" className="w-[80px] md:w-[160px] inline-block align-middle h-auto" alt=""/>
+                                <img src="https://team-gpt.com/wp-content/uploads/2023/09/Rectangle-White-Transparent-Border.svg" className="w-[160px] inline-block align-middle h-auto" alt=""/>
                             </a>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-center md:justify-end w-full md:w-[50%] items-center basis-auto flex-shrink flex-grow-0" >
+                    <div className="flex flex-row justify-center md:justify-end w-full md:w-[50%] items-center basis-auto flex-shrink flex-grow-0">
                         <div className="justify-end max-w-full relative text-right">
                             <SocialIcons />
                         </div>
@@ -163,20 +162,19 @@ const SocialIcons = () => {
         <Link href="https://www.linkedin.com/company/teamgpt/" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">LinkedIn</span>
-          <FontAwesomeIcon icon={faLinkedin} className="w-3 h-3 md:w-6 md:h-6" />
+          <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
         </Link>
         <Link href="https://twitter.com/team_gpt" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">Twitter</span>
-          <FontAwesomeIcon icon={faTwitter} className="w-3 h-3 md:w-6 md:h-6" />
+          <FontAwesomeIcon icon={faTwitter} className="w-6 h-6" />
         </Link>
         <Link href="https://www.youtube.com/@Team-GPT" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">YouTube</span>
-          <FontAwesomeIcon icon={faYoutube} className="w-3 h-3 md:w-6 md:h-6" />
+          <FontAwesomeIcon icon={faYoutube} className="w-6 h-6" />
         </Link>
       </div>
     );
-  };
-
+};
 export default Footer
