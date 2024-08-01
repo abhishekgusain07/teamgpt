@@ -131,7 +131,7 @@ const Testimonials = () => {
 const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
-      <div className="flex flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
+      <div className="flex-col  md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
           <div className="p-2.5 bg-gray-300 rounded-md h-full justify-start mr-auto">
             <div className="font-plex-sans text-[1rem] font-[500] text-black leading-[1rem]">
@@ -236,7 +236,7 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
 const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
-      <div className="flex flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
+      <div className="flex-col md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
       <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
           <div className="flex max-w-full justify-center items-center text-center w-full animate-fadeInUp relative">
             <div className="h-full">
