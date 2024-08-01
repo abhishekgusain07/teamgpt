@@ -85,7 +85,7 @@ const PricingTier = ({ tier }) => {
   };
 
   return (
-    <div className="flex flex-col border justify-between bg-custom-gradient border-[#1cffc3] rounded-[24px] shadow-xl p-6">
+    <div className="flex flex-col border justify-between bg-custom-gradient hover:shadow-top-right border-[#1cffc3] rounded-[24px] shadow-xl p-6">
       <div>
         <h2 className="text-lg leading-6 font-medium text-[#21EFB8]">{tier.name}</h2>
         <p className="font-plex-sans font-[700] text-[2rem] text-white">{tier.title}</p>

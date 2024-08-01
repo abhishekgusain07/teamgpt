@@ -12,6 +12,7 @@ const config: Config = {
         'background': 'background-color',
       },
       boxShadow: {
+        'top-right': '6px -6px 15px #21EFB8',
         'custom': '0 0 10px 0 rgba(0, 0, 0, 0.11)',
       },
       fontFamily: {
