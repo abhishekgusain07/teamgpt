@@ -54,7 +54,14 @@ const config: Config = {
           '0%, 50%': { transform: 'translateY(0)' },
           '50.01%, 100%': { transform: 'translateY(-100%)' },
         },
-                        
+        'text-slide': {
+          '0%, 40%': {
+              transform: 'translateY(0%)',
+          },
+          '50%, 90%': {
+              transform: 'translateY(-50%)',
+          }
+        }                
       },
       animation: {
         dash: 'dash 1.2s linear forwards',
@@ -62,9 +69,9 @@ const config: Config = {
         draw: 'draw 1.5s ease forwards',
         fadeInUp: 'fadeInUp 1s ease-out',
         fadeInDown: 'fadeInDown 1s ease-out',
+        'text-slide': 'text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite',
         'text-slide-2-smooth': 'text-slide-2-smooth 6s linear infinite',
         'number-slide': 'numberSlide 6s linear infinite',
-        'text-slide': 'textSlide 6s linear infinite',
       },
     },
   },
