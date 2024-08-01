@@ -28,6 +28,9 @@ const config: Config = {
           'custom-gradient': 'linear-gradient(201deg, #08523F 0%, #052727 60%)',
       },
       keyframes: {
+        draww: {
+          to: { 'stroke-dashoffset': '0' },
+        },
         draw: {
           to: { strokeDashoffset: '0' }
         },
@@ -70,6 +73,7 @@ const config: Config = {
         draw: 'draw 1.5s ease forwards',
         fadeInUp: 'fadeInUp 1s ease-out',
         fadeInDown: 'fadeInDown 1s ease-out',
+        'draww': 'draw 2s ease-in-out forwards',
         'text-slide': 'text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite',
         'text-slide-2-smooth': 'text-slide-2-smooth 6s linear infinite',
         'number-slide': 'numberSlide 6s linear infinite',
