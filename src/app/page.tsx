@@ -15,11 +15,7 @@ import Feedback from "./_components/Feedback";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Team::GPT - Intuitive GPT chat for your whole company</title>
-        <meta name="description" content="Team-GPT guarantees ChatGPT adoption for teams between 2 and 20,000 people." />
-      </Head>
+    <section className="w-[100vw]">
       <div className="bg-[#0d2327]" >
         <HeroSection />
         {/* <Video /> */}
@@ -39,6 +35,6 @@ export default function Home() {
         <Faqs />
       </div>
       <Footer />
-    </>
+    </section>
   );
 }
