@@ -62,8 +62,7 @@ const footerColumns = [
       ]
     }
   ];
-
-const Footer = () => {
+  const Footer = () => {
     return (
         <>
             <FooterHeading />
@@ -78,16 +77,16 @@ const FooterHeading = () => {
         <div className="bg-[#052727] flex flex-col rounded-t-[24px] -mt-6 mb-0 ml-0 mr-0">
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[20px] py-[10px]">
                 <SpacerCustomColor backgroundColor={'#052727'} height={14}/>
-                <div className="flex flex-row w-[90vw] md:w-full h-full flex-grow self-stretch sm:flex-wrap border-[3px] border-solid border-[#AFAFAF]  rounded-[20px] p-8 custom-bg-transition">
-                    <div className="w-[76%] flex flex-row justify-center md:justify-start items-center text-center p-2.5">
-                        <div className="max-w-full text-center  md:text-left relative">
-                        <h2 className="font-plex-sans text-[#ffffff] text-[1.7rem] md:text-[2.5rem] font-[700] leading-[2.6rem]">Can you afford to skip on AI adoption?</h2>
+                <div className="flex flex-col md:flex-row w-[90vw] md:w-full h-full flex-grow self-stretch sm:flex-wrap border-[3px] border-solid border-[#AFAFAF] rounded-[20px] p-4 md:p-8 custom-bg-transition">
+                    <div className="w-full md:w-[76%] flex flex-row justify-center md:justify-start items-center text-center p-2.5 mb-4 md:mb-0">
+                        <div className="max-w-full text-center md:text-left relative">
+                            <h2 className="font-plex-sans text-[#ffffff] text-[1.5rem] md:text-[2.5rem] font-[700] leading-[2rem] md:leading-[2.6rem]">Can you afford to skip on AI adoption?</h2>
                         </div>
                     </div>
                     <div className="flex items-center justify-center md:justify-end text-center">
                         <Link
                             href="/"
-                            className="bg-[#F1DA44] text-black px-[36px] py-[15px] rounded-xl text-[1.5rem] leading-[1.6rem] font-[500] inline-flex font-plex-sans items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90"
+                            className="bg-[#F1DA44] text-black px-[24px] md:px-[36px] py-[12px] md:py-[15px] rounded-xl text-[1.2rem] md:text-[1.5rem] leading-[1.4rem] md:leading-[1.6rem] font-[500] inline-flex font-plex-sans items-center transition-transform duration-300 hover:scale-90 focus:scale-90 active:scale-90"
                             >
                                 Start Free
                             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -101,86 +100,83 @@ const FooterHeading = () => {
         </div>
     )
 }
+
 const FooterMain = () => {
     return (
-        <>
         <div className="bg-[#052727]">
-            <div className="flex flex-col md:flex-row flex-wrap justify-start items-start basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[15px] py-[10px] px-[10px] md:[px-0]">
-                {
-                    footerColumns.map((section, idx) => (
-                        <div key={idx} className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow px-[30px] md:px-[10px] py-[10px] w-full md:w-[18%]">
-                            {
-                                section.items.map((item,idx) => (
-                                    <div key={idx}>
-                                        <span 
-                                            className="font-plex-sans text-[1.2rem] md:text-[1rem] font-[500]"
-                                            style={{ color: item.color || '#ffffff' }}
-                                            >
-                                            <a className="no-underline" href={item.href} target="_blank">{item.text}</a>
-                                        </span>
-                                    </div>
-                                ))
-                            }
-                            
-                        </div>
-                    ))
-                }
+            <div className="flex flex-col md:flex-row flex-wrap justify-start items-start basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[15px] py-[10px] px-[10px] md:px-0">
+                {footerColumns.map((section, idx) => (
+                    <div key={idx} className="flex flex-col basis-auto gap-y-1 flex-shrink flex-grow px-[30px] md:px-[10px] py-[10px] w-full sm:w-1/2 md:w-[18%]">
+                        {section.items.map((item, idx) => (
+                            <div key={idx}>
+                                <span 
+                                    className="font-plex-sans text-[1rem] md:text-[1rem] font-[500]"
+                                    style={{ color: item.color || '#ffffff' }}
+                                    >
+                                    <a className="no-underline" href={item.href} target="_blank">{item.text}</a>
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
-        </>
     )
 }
+
 const FooterEnd = () => {
     return (
-        <>
-            <div className="bg-[#052727] flex flex-col">
-                <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-[150px] gap-[20px] py-[30px]">
-                    <div className="flex flex-row justify-end w-full  border-b broder-[3px] py-[20px]">
-                        <div className="max-w-full relative text-center h-full">
-                            <img width="122" height="29" src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" className="inline-block align-middle h-auto max-w-full" alt="" data-lazy-src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" data-ll-status="loaded"/>
-                        </div>
-                        <div className="max-w-full relative text-center h-full">
+        <div className="bg-[#052727] flex flex-col">
+            <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-4 md:mx-[150px] gap-[20px] py-[30px]">
+                <div className="flex flex-col md:flex-row justify-between w-full border-b border-[3px] py-[20px]">
+                    <div className="max-w-full relative text-center h-full mb-4 md:mb-0">
+                        <img width="122" height="29" src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" className="inline-block align-middle h-auto max-w-full" alt="" data-lazy-src="https://team-gpt.com/wp-content/uploads/2023/04/Frame-1.svg" data-ll-status="loaded"/>
+                    </div>
+                    <div className="max-w-full relative text-center h-full">
                         <a href="https://camplight.net/" target="_blank" rel="nofollow" className="no-underline">
-							<img width="3258" height="811" src="https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1.png" className="h-[26px] inline-block align-middle w-full" alt="" data-lazy-srcset="https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1.png 3258w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-300x75.png 300w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-1024x255.png 1024w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-768x191.png 768w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-1536x382.png 1536w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-2048x510.png 2048w, https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1-360x90.png 360w"/></a>
+                            <img width="3258" height="811" src="https://team-gpt.com/wp-content/uploads/2023/04/logo_horizontal_white-1.png" className="h-[26px] inline-block align-middle w-full" alt="" />
+                        </a>
                     </div>
-                    </div>
-                    <div className="flex flex-row w-full justify-between basis-auto flex-shrink">
-                        <div className="flex flex-row justify-start w-[50%] items-center basis-auto flex-shrink flex-grow-0">
-                            <div className="justify-start max-w-full relative text-left">
-                                <a href="https://team-gpt.com" className="no-underline" target="_blank">
-                                <img src="https://team-gpt.com/wp-content/uploads/2023/09/Rectangle-White-Transparent-Border.svg" className="w-[160px] inline-block align-middle h-auto" alt=""/></a>
-                            </div>
-                        </div>
-                        <div className="flex flex-row justify-end w-[50%] items-center basis-auto flex-shrink flex-grow-0" >
-                            <div className="justify-end max-w-full relative text-right">
-                                <SocialIcons />
-                            </div>
+                </div>
+                <div className="flex flex-col md:flex-row w-full justify-between basis-auto flex-shrink">
+                    <div className="flex flex-row justify-center md:justify-start w-full md:w-[50%] items-center basis-auto flex-shrink flex-grow-0 mb-4 md:mb-0">
+                        <div className="justify-start max-w-full relative text-left">
+                            <a href="https://team-gpt.com" className="no-underline" target="_blank">
+                                <img src="https://team-gpt.com/wp-content/uploads/2023/09/Rectangle-White-Transparent-Border.svg" className="w-[80px] md:w-[160px] inline-block align-middle h-auto" alt=""/>
+                            </a>
                         </div>
                     </div>
-                </div>  
-            </div>
-        </>
+                    <div className="flex flex-row justify-center md:justify-end w-full md:w-[50%] items-center basis-auto flex-shrink flex-grow-0" >
+                        <div className="justify-end max-w-full relative text-right">
+                            <SocialIcons />
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
     )
 }
+
 const SocialIcons = () => {
     return (
       <div className="grid grid-flow-col gap-4">
         <Link href="https://www.linkedin.com/company/teamgpt/" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">LinkedIn</span>
-          <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
+          <FontAwesomeIcon icon={faLinkedin} className="w-3 h-3 md:w-6 md:h-6" />
         </Link>
         <Link href="https://twitter.com/team_gpt" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">Twitter</span>
-          <FontAwesomeIcon icon={faTwitter} className="w-6 h-6" />
+          <FontAwesomeIcon icon={faTwitter} className="w-3 h-3 md:w-6 md:h-6" />
         </Link>
         <Link href="https://www.youtube.com/@Team-GPT" target="_blank" rel="noopener noreferrer"
           className="text-[#1CFFC3] hover:text-[#1CAB83] transition-colors duration-300">
           <span className="sr-only">YouTube</span>
-          <FontAwesomeIcon icon={faYoutube} className="w-6 h-6" />
+          <FontAwesomeIcon icon={faYoutube} className="w-3 h-3 md:w-6 md:h-6" />
         </Link>
       </div>
     );
   };
+
 export default Footer
