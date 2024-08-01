@@ -43,7 +43,7 @@
   }
   
   .animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 1s ease-out;
   }
 
   @keyframes fadeInDown {

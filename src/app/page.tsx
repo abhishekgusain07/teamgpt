@@ -12,6 +12,7 @@ import Pricing from "./_components/Pricing";
 import HowItWorks from "./_components/HowItWorks";
 import Faqs from "./_components/Faqs";
 import Footer from "./_components/Footer";
+import Feedback from "./_components/Feedback";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       </div>
       <div className="bg-[#F8F8FF]">
         <HowItWorks />
+        <Feedback />
         <Faqs />
       </div>
       <Footer />

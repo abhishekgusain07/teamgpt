@@ -1,7 +1,7 @@
 import Spacer from "./Spacer"
 import SpacerCustomColor from "./SpacerCustomColor"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faKey, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faKey, faUsers, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 
 const HowItWorks = () => {
     return (
@@ -46,7 +46,7 @@ const Cards = () => {
           number: 2,
         },
         {
-          icon: faUsers,
+          icon: faPeopleGroup,
           title: 'Collaborate with your team on chats and prompts!',
           number: 3,
         },
@@ -60,14 +60,14 @@ const Cards = () => {
             {/* comp */}
             <div className="flex justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]">
             {steps.map((step) => (
-                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[33%] h-full flex flex-col justify-between animate-fadeInUp">
-                <div className="flex justify-center items-center mx-auto  text-teal-400 mb-[20px] my-[8px] h-[25px] w-[20px] ">
-                    <FontAwesomeIcon icon={step.icon} />
-                </div>
+                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
+                    <div className="flex justify-center items-center mx-auto  text-[#1CAB83] h-[25px] w-[20px] mb-4">
+                        <FontAwesomeIcon icon={step.icon} className="w-[50px] h-[40px]"/>
+                    </div>
                     <div>
                         <p className="text-center font-plex-sans text-[1rem] font-[500] mb-1">{step.number}. {step.title}</p>
                         {step.subtitle && (
-                        <p className="text-center font-plex-sans text-[1rem] italic font-[500] text-teal-400">{step.subtitle}</p>
+                        <p className="text-center font-plex-sans text-[1rem] italic font-[500] text-[#1CAB83]">{step.subtitle}</p>
                         )}
                     </div>
                 </div>

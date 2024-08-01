@@ -21,7 +21,7 @@ const Menu = () => {
         <FontAwesomeIcon icon={faUsers} />
         <Link href="/team-gpt-enterprise">Team-GPT Enterprise</Link>
       </li>
-      <li className="flex flex-row gap-[20px] justify-start px-4 items-center font-plex-sans text-[1rem] font-[500] text-[#052727] py-[14px] hover:bg-[#052727] hover:text-white">
+      <li className="flex flex-row gap-[20px] border-y-2 border-gray-400 justify-start px-4 items-center font-plex-sans text-[1rem] font-[500] text-[#1CAB83] py-[14px] hover:bg-[#147a5d] hover:text-white">
         <FontAwesomeIcon icon={faUsers} />
         <Link href="/deploy-on-your-own-server">Deploy on Your Own Server</Link>
       </li>
@@ -51,7 +51,7 @@ const Menu = () => {
 
 const ProductMenu = () => {
   return (
-    <div className="absolute top-20 left-[23%] mt-1 bg-white text-black shadow-xl rounded-xl py-4 w-64">
+    <div className="absolute top-20 left-[23%] mt-1 bg-white text-black shadow-xl rounded-xl py-4 w-74">
       <Menu />
     </div>
   );
