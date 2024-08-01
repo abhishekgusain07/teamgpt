@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontFamily: {
         'plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
+        'plex-mono': ['"IBM Plex Mono"', 'sans-serif'],
       },
       alignItems: {
         'normal': 'normal',

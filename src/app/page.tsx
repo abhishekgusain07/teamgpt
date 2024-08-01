@@ -21,7 +21,6 @@ export default function Home() {
         <meta name="description" content="Team-GPT guarantees ChatGPT adoption for teams between 2 and 20,000 people." />
       </Head>
       <div className="bg-[#0d2327]" >
-        <Header />
         <HeroSection />
         {/* <Video /> */}
       </div>
@@ -32,7 +31,7 @@ export default function Home() {
           <Testimonials />
       </div>
       <div className="bg-[#052727]">
-        {/* <Pricing /> */}
+        <Pricing />
       </div>
       <div className="bg-[#F8F8FF]">
         <HowItWorks />

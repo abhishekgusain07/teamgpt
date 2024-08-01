@@ -1,6 +1,8 @@
 import Spacer from "./Spacer"
 
-const companies = ["https://team-gpt.com/wp-content/uploads/2023/08/maersk-300x74.png","https://team-gpt.com/wp-content/uploads/2023/10/Logos-website-3-e1696253710359-300x56.png","https://team-gpt.com/wp-content/uploads/2023/08/polkastarter-300x40.png","https://team-gpt.com/wp-content/uploads/2023/08/medesk-300x94.png","https://team-gpt.com/wp-content/uploads/2023/08/Charles-Schwab-Logo-2001-present-e1692039826365-300x52.png","https://team-gpt.com/wp-content/uploads/2023/08/limechain-1-300x90.png","https://team-gpt.com/wp-content/uploads/2023/08/Logos-website-1-300x65.png"]
+const companies = [
+    "https://team-gpt.com/wp-content/uploads/2023/08/maersk-300x74.png","https://team-gpt.com/wp-content/uploads/2023/10/Logos-website-3-e1696253710359-300x56.png","https://team-gpt.com/wp-content/uploads/2023/08/polkastarter-300x40.png","https://team-gpt.com/wp-content/uploads/2023/08/medesk-300x94.png","https://team-gpt.com/wp-content/uploads/2023/08/Charles-Schwab-Logo-2001-present-e1692039826365-300x52.png","https://team-gpt.com/wp-content/uploads/2023/08/limechain-1-300x90.png","https://team-gpt.com/wp-content/uploads/2023/08/Logos-website-1-300x65.png"
+]
 const Customer = () => {
     return (
         <div className="bg-gray-100 p-8">
