@@ -59,7 +59,7 @@ const ProductMenu = () => {
 
 const LearnMenu = () => {
   return (
-    <div className="absolute top-20 left-[40%] mt-1 bg-white text-black shadow-xl rounded-xl py-4 w-64">
+    <div className="absolute top-20 left-[40%] mt-1 bg-white text-black shadow-xl rounded-xl py-4 w-74">
       <Menu />
     </div>
   );
