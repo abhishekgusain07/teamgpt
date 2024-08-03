@@ -1,8 +1,27 @@
+"use client"
+import {motion} from "framer-motion"
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Spacer from './Spacer';
 import Link from 'next/link';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
+
+const slideInUpVariants = {
+  initial: {
+    opacity: 0,
+    y: 50
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, -0.05, 0.01, 0.99]
+    }
+  }
+};
 const testimonialsData = [
   {
     title: "Folders and Subfolders",
@@ -129,6 +148,8 @@ const Testimonials = () => {
 };
 
 const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
+  const refeven = useRef(null)
+  const isInVieweven = useInView(refeven, { once: false });
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
       <div className="flex flex-col  md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
@@ -187,7 +208,13 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
           <Spacer height={25} />
         </div>
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
-          <div className="flex max-w-full justify-center items-center text-center w-full animate-fadeInUp relative">
+          <motion.div 
+            className="flex max-w-full justify-center items-center text-center w-full relative"
+            initial="hidden"
+            ref={refeven}
+            variants={slideInUpVariants}
+            animate={isInVieweven ? "visible" : "hidden"}
+          >
             <div className="h-full">
               <img
                 decoding="async"
@@ -198,12 +225,14 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
                 alt={testimonial.mainImage.alt}
               />
             </div>
-          </div>
+          </motion.div>
           <Spacer height={17} />
           {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
             <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">
               <div className="w-full flex flex-row basis-auto gap-[23px]">
-                <div className="max-w-full text-center relative h-fit w-[20%] p-[10px]">
+                <motion.div className="max-w-full text-center relative h-fit w-[20%] p-[10px]"
+                 
+                >
                   <img
                     decoding="async"
                     width="800"
@@ -212,7 +241,7 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
                     className="rounded-[10px] inline-block align-middle h-auto w-full"
                     alt=""
                   />
-                </div>
+                </motion.div>
                 <div className="w-[76.4%] flex flex-col max-w-[1140px] gap-[20px] p-[5px]">
                   <div className="w-full relative h-full">
                     <div className="text-[#052727] font-plex-sans text-[1rem] font-[400]">
@@ -234,11 +263,19 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
   );
 };
 const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
+  const refOdd = useRef(null)
+  const isInViewOdd = useInView(refOdd, { once: false });
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
       <div className="flex flex-col md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
-            <div className="flex max-w-full justify-center items-center text-center w-full animate-fadeInUp relative">
+            <motion.div 
+              className="flex max-w-full justify-center items-center text-center w-full  relative"
+              variants={slideInUpVariants}
+              initial="hidden"
+              ref={refOdd}
+              animate={isInViewOdd ? "visible" : "hidden"}
+              >
               <div className="h-full">
                 <img
                   decoding="async"
@@ -249,12 +286,14 @@ const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) =
                   alt={testimonial.mainImage.alt}
                 />
               </div>
-            </div>
+            </motion.div>
             <Spacer height={17} />
             {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
               <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">
                 <div className="w-full flex flex-row basis-auto gap-[23px]">
-                  <div className="max-w-full text-center relative h-fit w-[20%] p-[10px]">
+                  <motion.div className="max-w-full text-center relative h-fit w-[20%] p-[10px]"
+                    
+                  >
                     <img
                       decoding="async"
                       width="800"
@@ -263,7 +302,7 @@ const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) =
                       className="rounded-[10px] inline-block align-middle h-auto w-full"
                       alt=""
                     />
-                  </div>
+                  </motion.div>
                   <div className="w-[76.4%] flex flex-col max-w-[1140px] gap-[20px] p-[5px]">
                     <div className="w-full relative h-full">
                       <div className="text-[#052727] font-plex-sans text-[1rem] font-[400]">

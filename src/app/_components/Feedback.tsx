@@ -1,12 +1,61 @@
+"use client"
 import Link from "next/link";
 import SpacerCustomColor from "./SpacerCustomColor";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
+
+const fadeInUpVariants = {
+    initial: {
+        opacity: 0,
+        y: "100%"
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+        duration: 2,
+        ease: "easeOut"
+        }
+    }
+};
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1 }
+    }
+};
+const slideInUpVariants = {
+    initial: {
+      opacity: 0,
+      y: 50
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
 const Feedback = () => {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: false });
     return (
         <>
-            <FeedbackHeading />
-            <FeedbackContent />
-            <FeedbackFooter />
+            <motion.div
+                variants={slideInUpVariants}
+                initial="hidden"
+                ref={ref}
+                animate = {isInView ? "visible" : "hidden"}
+            >
+                <FeedbackHeading />
+                <FeedbackContent />
+                <FeedbackFooter />
+            </motion.div>
         </>
     )
 }
@@ -71,7 +120,7 @@ const FeedbackContent = () => {
         <div className="bg-[#052727] flex flex-col p-[10px] w-full h-full">
             <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-[20px] p-[10px] w-full">
                 {feedbackDataFirst.map((item, index) => (
-                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-center p-[25px] md:p-[20px] w-[95%] md:w-[49%] animate-fadeInUp`}>
+                    <div key={index} className={`bg-[#F8F8FF] rounded-xl flex flex-col justify-center items-center p-[25px] md:p-[20px] w-[95%] md:w-[49%]`}>
                         <div className="h-[62px] w-[52px] rounded-full flex flex-col justify-start items-center mr-auto">
                             <img className="rounded-full items-start" width="1024" height="1024" decoding="async" src={item.image} />
                         </div>

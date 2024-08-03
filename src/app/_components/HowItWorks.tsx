@@ -1,9 +1,13 @@
+'use client'
+import {motion, useInView} from "framer-motion"
 import Spacer from "./Spacer"
 import SpacerCustomColor from "./SpacerCustomColor"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey, faUsers, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
+import { useRef } from "react";
 
 const HowItWorks = () => {
+    
     return (
         <>
             <SectionHeading />
@@ -12,7 +16,42 @@ const HowItWorks = () => {
         </>
     )
 }   
-
+const slideInUpVariants = {
+    initial: {
+      opacity: 0,
+      y: 50
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+const fadeInUpVariants = {
+    initial: {
+      opacity: 0,
+      y: "100%"
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2,
+        ease: "easeOut"
+      }
+    }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 }
+    }
+  };
 const SectionHeading = () => {
     return (
         <div
@@ -51,6 +90,8 @@ const Cards = () => {
           number: 3,
         },
       ];
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false });
     return (
         <div
             className="bg-[#F8F8FF] flex flex-col ml-auto mx-auto p-[10px]"
@@ -58,9 +99,17 @@ const Cards = () => {
             <div className="flex flex-col flex-wrap justify-center items-center basis-auto flex-grow flex-shrink self-auto relative mx-auto md:mx-[150px] gap-[15px] ">
 
             {/* comp */}
-            <div className="flex flex-col md:flex-row justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]">
+            <motion.div 
+                className="flex flex-col md:flex-row justify-center gap-[20px] items-center p-[10px] bg-[#F8F8FF]"
+                variants={slideInUpVariants}
+                initial="hidden"
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
+            >
             {steps.map((step) => (
-                <div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[97%] md:w-[33%] h-full flex flex-col gap-[15px] justify-between animate-fadeInUp">
+                <motion.div key={step.number} className="bg-[#0d2327] text-white pt-[3rem] pb-[2rem] px-[2rem] rounded-[20px] w-[97%] md:w-[33%] h-full flex flex-col gap-[15px] justify-between "
+                variants={itemVariants}
+                >
                     <div className="flex justify-center items-center mx-auto  text-[#1CAB83] h-[25px] w-[20px] mb-4">
                         <FontAwesomeIcon icon={step.icon} className="w-[50px] h-[40px]"/>
                     </div>
@@ -70,11 +119,10 @@ const Cards = () => {
                         <p className="text-center font-plex-sans text-[1rem] italic font-[500] text-[#1CAB83]">{step.subtitle}</p>
                         )}
                     </div>
-                </div>
+                </motion.div>
             ))}
-            </div>
-
-            </div>
+        </motion.div>
+        </div>
         </div>
     )
 }
