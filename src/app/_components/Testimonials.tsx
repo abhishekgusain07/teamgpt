@@ -9,11 +9,11 @@ import { useInView } from 'framer-motion';
 
 
 const slideInUpVariants = {
-  initial: {
+  hidden: {
     opacity: 0,
     y: 50
   },
-  animate: {
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
@@ -148,8 +148,9 @@ const Testimonials = () => {
 };
 
 const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
-  const refeven = useRef(null)
-  const isInVieweven = useInView(refeven, { once: false });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
       <div className="flex flex-col  md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
@@ -170,7 +171,7 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
           </div>
           <div className="max-w-[100%] font-plex-sans text-[1rem] font-[500] text-[#052727]">
             <div className="h-full box-border">
-              {testimonial.description.map((para:any, idxx:any) => (
+              {testimonial.description.map((para:string, idxx:number) => (
                 <p key={idxx} className="mt-0 mb-[0.9rem] text-[#052727] text-[1rem] font-plex-sans font-[500] box-border">
                   {para}
                 </p>
@@ -211,9 +212,9 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
           <motion.div 
             className="flex max-w-full justify-center items-center text-center w-full relative"
             initial="hidden"
-            ref={refeven}
+            ref={ref}
             variants={slideInUpVariants}
-            animate={isInVieweven ? "visible" : "hidden"}
+            animate={isInView ? "visible" : "hidden"}
           >
             <div className="h-full">
               <img
@@ -230,9 +231,7 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
           {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
             <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">
               <div className="w-full flex flex-row basis-auto gap-[23px]">
-                <motion.div className="max-w-full text-center relative h-fit w-[20%] p-[10px]"
-                 
-                >
+                <motion.div className="max-w-full text-center relative h-fit w-[20%] p-[10px]">
                   <img
                     decoding="async"
                     width="800"
@@ -263,30 +262,30 @@ const TestimonialEven = ({ testimonial, idx }:{testimonial: any, idx?: number}) 
   );
 };
 const TestimonialOdd = ({ testimonial, idx }:{testimonial: any, idx?: number}) => {
-  const refOdd = useRef(null)
-  const isInViewOdd = useInView(refOdd, { once: false });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: false });
   return (
     <div className={`flex flex-row w-auto h-full flex-grow self-stretch flex-wrap gap-0 transition-all duration-300 pl-0 pr-0 mx-auto pb-4 justify-normal items-normal ${idx && idx === 0 ? 'pt-24 pl-0' : 'pt-10'}`}>
       <div className="flex flex-col md:flex-row flex-basis-auto flex-wrap justify-center items-center w-full h-full mx-auto md:mx-[150px] my-0 flex-grow flex-shrink self-auto py-8">
         <div className="flex flex-col w-auto h-auto flex-grow-0 min-h-[100px] gap-[20px] self-auto flex-wrap items-center transition-all duration-300 pt-8 pb-8 pl-8 pr-8 md:w-1/2 basis-auto flex-shrink max-w-[1140px]">
-            <motion.div 
-              className="flex max-w-full justify-center items-center text-center w-full  relative"
-              variants={slideInUpVariants}
-              initial="hidden"
-              ref={refOdd}
-              animate={isInViewOdd ? "visible" : "hidden"}
-              >
-              <div className="h-full">
-                <img
-                  decoding="async"
-                  width="2556"
-                  height="1434"
-                  src={testimonial.mainImage.src}
-                  className="inline-block align-middle h-auto max-w-full"
-                  alt={testimonial.mainImage.alt}
-                />
-              </div>
-            </motion.div>
+          <motion.div 
+            ref={ref}
+            className="flex max-w-full justify-center items-center text-center w-full relative"
+            variants={slideInUpVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            <div className="h-full">
+              <img
+                decoding="async"
+                width="2556"
+                height="1434"
+                src={testimonial.mainImage.src}
+                className="inline-block align-middle h-auto max-w-full"
+                alt={testimonial.mainImage.alt}
+              />
+            </div>
+          </motion.div>
             <Spacer height={17} />
             {testimonial.testimonials.map((singleTestimonial:any, idx:any) => (
               <div key={idx} className="flex flex-row w-full h-full flex-grow self-stretch flex-wrap items-start transition-all duration-300 rounded-[20px] mt-[2px] mb-[2px] ml-[2px] mr-[2px] max-w-[1140px]">

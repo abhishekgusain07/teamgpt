@@ -17,11 +17,11 @@ const HowItWorks = () => {
     )
 }   
 const slideInUpVariants = {
-    initial: {
+    hidden: {
       opacity: 0,
       y: 50
     },
-    animate: {
+    visible: {
       opacity: 1,
       y: 0,
       transition: {

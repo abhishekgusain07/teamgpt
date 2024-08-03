@@ -29,13 +29,12 @@ const companies = [
       transition: { duration: 1 }
     }
   };
-
-const slideInUpVariants = {
-    initial: {
+  const slideInUpVariants = {
+    hidden: {
       opacity: 0,
       y: 50
     },
-    animate: {
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
@@ -43,7 +42,7 @@ const slideInUpVariants = {
         ease: [0.6, -0.05, 0.01, 0.99]
       }
     }
-};
+  };
 const Customer = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false });
